@@ -10,6 +10,8 @@
 | 方向卡 | 当题材还没有明确的视觉方向时，从[方向卡](skills/aesthetics/references/directions.md)选一个起点，再融入题材本身的具体元素。 |
 | 烛光 | [SKILL.md](skills/aesthetics/SKILL.md)指导如何确定视觉焦点、取舍元素，并用 [Codex 渲染指南](skills/aesthetics/references/codex-rendering.md)检查实际效果。 |
 
+评审或优化已有作品时，使用[审计指南](skills/aesthetics/references/audit.md)提取项目自己的设计规则，按影响分级报告问题，并在用户要求时修复。
+
 ## 安装
 
 在仓库根目录运行以下命令。已有同名 skill 时，先移走旧目录，再安装新版。默认安装路径是 `~/.codex/skills/aesthetics/`。
