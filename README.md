@@ -1,13 +1,32 @@
 # 一缕烛光 · Codex Aesthetics
 
-面向 Codex 的视觉与交互设计 skill。它提供网页视觉和交互的默认做法、按题材选择方向的参考卡，以及使用 Codex 工具检查实际渲染的流程。
+面向 Codex 的视觉与交互设计 skill，适用于网页、界面、海报、幻灯片等需要视觉判断的任务。
+
+## 三层结构
+
+| 层 | 作用 |
+|---|---|
+| 保底手艺 | 用[网页视觉指南](skills/aesthetics/references/floor-web-ui.md)建立排版、间距和配色。可交互页面再用[交互指南](skills/aesthetics/references/floor-interaction.md)补齐状态、反馈和动效。 |
+| 方向卡 | 当题材还没有明确的视觉方向时，从[方向卡](skills/aesthetics/references/directions.md)选一个起点，再融入题材本身的具体元素。 |
+| 烛光 | [SKILL.md](skills/aesthetics/SKILL.md)指导如何确定视觉焦点、取舍元素，并用 [Codex 渲染指南](skills/aesthetics/references/codex-rendering.md)检查实际效果。 |
 
 ## 安装
 
-把整个 `skills/aesthetics/` 目录放入 Codex 的用户 skill 目录。已有同名 skill 时，先移走旧目录，再放入新版。默认安装路径是 `~/.codex/skills/aesthetics/`。
+在仓库根目录运行以下命令。已有同名 skill 时，先移走旧目录，再安装新版。默认安装路径是 `~/.codex/skills/aesthetics/`。
 
 ```sh
-cp -R skills/aesthetics "${CODEX_HOME:-$HOME/.codex}/skills/"
+skill_dir="${CODEX_HOME:-$HOME/.codex}/skills"
+mkdir -p "$skill_dir" && cp -R skills/aesthetics "$skill_dir/"
 ```
 
-在视觉任务中可以用 `$aesthetics` 显式调用。入口是 [SKILL.md](skills/aesthetics/SKILL.md)，配套参考文件随目录一同安装。
+## 调用示例
+
+在 Codex 对话中用 `$aesthetics` 显式调用，然后描述要做的作品或要解决的问题。
+
+```text
+$aesthetics 给社区图书馆做一个活动报名页。参考老式借书卡的编号和横线，让报名按钮成为首屏焦点。完成后检查桌面和手机布局。
+```
+
+```text
+$aesthetics 优化现有的搜索结果页，沿用项目的组件和配色。补齐加载、空结果和错误重试状态，再用键盘走一遍搜索流程。
+```
